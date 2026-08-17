@@ -1,0 +1,33 @@
+========================================================================
+ MODÈLE VOCAL POUR LE MOT D'ACTIVATION « JARVIS » (mains-libres, offline)
+========================================================================
+
+Le mot d'activation « Jarvis » utilise Vosk, qui fonctionne 100% hors-ligne et
+GRATUITEMENT, mais a besoin d'un petit modèle vocal français.
+
+--- ÉTAPES ---
+
+1. Télécharge le modèle FR "small" (~41 Mo) ici :
+   https://alphacephei.com/vosk/models
+   → fichier : vosk-model-small-fr-0.22.zip
+
+2. Décompresse le zip. Tu obtiens un dossier "vosk-model-small-fr-0.22"
+   contenant des sous-dossiers : am, conf, graph, ivector, ...
+
+3. Copie TOUT ce contenu directement dans :
+   app/src/main/assets/model-fr/
+
+   Résultat attendu :
+   app/src/main/assets/model-fr/am/...
+   app/src/main/assets/model-fr/conf/...
+   app/src/main/assets/model-fr/graph/...
+   app/src/main/assets/model-fr/ivector/...
+   (les fichiers doivent être DIRECTEMENT dans model-fr/, pas dans un
+    sous-dossier "vosk-model-small-fr-0.22/")
+
+4. Recompile l'app.
+
+--- SANS CE MODÈLE ---
+
+L'app fonctionne quand même : le mot d'activation « Jarvis » est simplement
+désactivé. Tu déclenches Jarvis en appuyant sur la bulle flottante.

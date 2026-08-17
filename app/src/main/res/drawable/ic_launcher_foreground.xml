@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- anneau extérieur (dégradé cyan -> bleu) -->
+    <path
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:pathData="M22,54 a32,32 0 1,0 64,0 a32,32 0 1,0 -64,0">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:type="linear"
+                android:startX="22" android:startY="22"
+                android:endX="86" android:endY="86"
+                android:startColor="#22D3EE"
+                android:endColor="#3B82F6" />
+        </aapt:attr>
+    </path>
+
+    <!-- anneau intérieur -->
+    <path
+        android:strokeColor="#2B4A78"
+        android:strokeWidth="1.4"
+        android:pathData="M30,54 a24,24 0 1,0 48,0 a24,24 0 1,0 -48,0" />
+
+    <!-- petits repères du réacteur -->
+    <path android:strokeColor="#22D3EE" android:strokeWidth="2" android:strokeLineCap="round"
+        android:pathData="M54,24 L54,29 M54,79 L54,84 M24,54 L29,54 M79,54 L84,54" />
+
+    <!-- lettre J -->
+    <path
+        android:strokeWidth="7"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M49,39 L65,39 M60.5,39 L60.5,60 Q60.5,70 49,70 Q41,70 39,61.5">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:type="linear"
+                android:startX="39" android:startY="39"
+                android:endX="65" android:endY="70"
+                android:startColor="#EAFDFF"
+                android:endColor="#7FE9F8" />
+        </aapt:attr>
+    </path>
+</vector>

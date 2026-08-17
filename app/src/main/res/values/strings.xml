@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Jarvis</string>
+    <string name="accessibility_label">Jarvis — Écran &amp; Contrôle</string>
+    <string name="accessibility_description">Permet à Jarvis de lire le contenu de l\'écran pour répondre à vos questions, et d\'effectuer des actions (ouvrir des applications, naviguer, appuyer, faire défiler) à votre demande vocale.</string>
+</resources>
