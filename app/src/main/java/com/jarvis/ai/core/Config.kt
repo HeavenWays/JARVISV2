@@ -47,9 +47,11 @@ class Config(context: Context) {
         private const val KEY_NAT_VOICE = "natural_voice"
         private const val KEY_VOICE = "voice_name"
 
-        // Modèles Groq gratuits (modifiables si Groq en change le nom un jour)
-        const val DEFAULT_TEXT_MODEL = "llama-3.3-70b-versatile"
-        const val DEFAULT_VISION_MODEL = "meta-llama/llama-4-scout-17b-16e-instruct"
+        // Modèles Groq actuels (Groq retire régulièrement les anciens : llama-3.3-70b-versatile
+        // et llama-4-scout ont été supprimés le 17/06/2026 → toute requête échouait). Si Groq
+        // change encore ces noms, il suffit de les modifier ici ou dans les réglages de l'app.
+        const val DEFAULT_TEXT_MODEL = "openai/gpt-oss-120b"
+        const val DEFAULT_VISION_MODEL = "qwen/qwen3.6-27b"
 
         // Voix masculine FR neuronale la plus proche d'un vrai humain (gratuite).
         // Rémy (multilingue, dernière génération) sonne beaucoup plus naturel et chaleureux

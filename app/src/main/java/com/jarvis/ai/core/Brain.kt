@@ -133,8 +133,10 @@ class Brain(private val config: Config, private val memory: ScreenMemory) {
             flush(false)
         }
         if (!ok && sb.isBlank()) {
+            // On remonte le VRAI message d'erreur (ex : "Erreur du serveur IA (code 400)…" quand
+            // le modèle n'existe plus) au lieu de tout masquer en "problème de connexion".
             val out = call(body(config.textModel, messages, stream = false, maxTokens = 420, temperature = 0.6))
-            sb.append(if (out.ok) out.content else "Je n'arrive pas à joindre le serveur pour l'instant. Vérifie ta connexion.")
+            sb.append(out.content)
         }
         flush(true)
 

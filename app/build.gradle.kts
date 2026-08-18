@@ -26,8 +26,8 @@ android {
         applicationId = "com.jarvis.ai"
         minSdk = 26
         targetSdk = 34
-        versionCode = 5
-        versionName = "2.2"
+        versionCode = 6
+        versionName = "2.3"
         buildConfigField("String", "GROQ_API_KEY", "\"$groqKey\"")
     }
 
