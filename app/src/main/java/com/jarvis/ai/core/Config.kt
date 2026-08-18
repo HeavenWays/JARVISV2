@@ -9,7 +9,9 @@ class Config(context: Context) {
     private val prefs = context.getSharedPreferences("jarvis_prefs", Context.MODE_PRIVATE)
 
     var groqKey: String
-        get() = prefs.getString(KEY_GROQ, BuildConfig.GROQ_API_KEY) ?: BuildConfig.GROQ_API_KEY
+        // .trim() : évite qu'un espace/retour à la ligne parasite dans la clé (ex. venant du
+        // secret CI) ne rende l'en-tête HTTP invalide → fausse "erreur de connexion".
+        get() = (prefs.getString(KEY_GROQ, BuildConfig.GROQ_API_KEY) ?: BuildConfig.GROQ_API_KEY).trim()
         set(v) { prefs.edit().putString(KEY_GROQ, v.trim()).apply() }
 
     var textModel: String
